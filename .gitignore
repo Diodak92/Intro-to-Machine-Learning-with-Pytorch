@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# nn training and testing data
+images/
+# nn model
+model.pth
+# some junk
+.DS_Store
+CIFAR-10_Image_Classifier/.DS_Store
