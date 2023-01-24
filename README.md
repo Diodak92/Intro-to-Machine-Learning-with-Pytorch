@@ -1,3 +1,5 @@
+# Intro to Machine Learning with Pytorch
+
 ## Prerequirements
 
 **To run scripts from this repo on your local machine**
@@ -7,4 +9,4 @@
 3. Download repo
 3. Open Jupyter Notebook
 
-## Project 2: CIFAR-10 Image Clasifier
+### Project 2: CIFAR-10 Image Clasifier
