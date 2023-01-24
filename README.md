@@ -17,4 +17,6 @@ In response, you should get a similar output: ```conda 22.11.1```
 9. Open Jupyter Notebook by entering the command: ```jupyter notebook```
 10. Open the selected project file with the extension ```.ipynb``` 
 
-### Project 2: CIFAR-10 Image Clasifier 🌇
+### Project 2: [CIFAR-10 Image Clasifier](https://github.com/Diodak92/Intro-to-Machine-Learning-with-Pytorch/blob/main/CIFAR-10_Image_Classifier/CIFAR-10_Image_Classifier.ipynb) 🎑
+
+The goal of this project was to build a simple image classifier using the popular deep learning package: [PyTorch](https://pytorch.org). The classifier is designed to recognize 10 categories of images from the [CIFAR-10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html).
