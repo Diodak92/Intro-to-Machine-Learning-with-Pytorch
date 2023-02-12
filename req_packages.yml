@@ -6,6 +6,7 @@ channels:
 dependencies:
   - alabaster=0.7.13=pyhd8ed1ab_0
   - aom=3.5.0=hf0c8a7f_0
+  - appdirs=1.4.4=pyh9f0ad1d_0
   - applaunchservices=0.3.0=pyhd8ed1ab_2
   - appnope=0.1.3=pyhd8ed1ab_0
   - arrow=1.2.3=pyhd8ed1ab_0
@@ -86,6 +87,7 @@ dependencies:
   - jellyfish=0.9.0=py39ha30fb19_2
   - jinja2=3.1.2=pyhd8ed1ab_1
   - jinja2-time=0.2.0=pyhd8ed1ab_3
+  - joblib=1.2.0=pyhd8ed1ab_0
   - jpeg=9e=hac89ed1_2
   - jsonschema=4.17.3=pyhd8ed1ab_0
   - jupyter_client=7.4.9=pyhd8ed1ab_0
@@ -98,18 +100,23 @@ dependencies:
   - lazy-object-proxy=1.9.0=py39ha30fb19_0
   - lcms2=2.14=h29502cd_1
   - lerc=4.0.0=hb486fe8_0
+  - libblas=3.9.0=12_osx64_mkl
   - libbrotlicommon=1.0.9=hb7f2c08_8
   - libbrotlidec=1.0.9=hb7f2c08_8
   - libbrotlienc=1.0.9=hb7f2c08_8
+  - libcblas=3.9.0=12_osx64_mkl
   - libclang=13.0.1=default_he082bbe_0
   - libcxx=14.0.6=hccf4f1f_0
   - libdeflate=1.14=hb7f2c08_0
   - libedit=3.1.20191231=h0678c8f_2
   - libffi=3.4.2=h0d85af4_5
+  - libgfortran=5.0.0=11_3_0_h97931a8_27
+  - libgfortran5=11.3.0=h082f757_27
   - libglib=2.74.1=h4c723e1_1
   - libiconv=1.17=hac89ed1_0
   - libidn2=2.3.4=hb7f2c08_0
   - libjpeg-turbo=2.1.4=hb7f2c08_0
+  - liblapack=3.9.0=12_osx64_mkl
   - libllvm13=13.0.1=h64f94b2_2
   - libogg=1.3.4=h35c211d_1
   - libopus=1.3.1=hc929b4f_1
@@ -176,6 +183,7 @@ dependencies:
   - platformdirs=2.6.2=pyhd8ed1ab_0
   - pluggy=1.0.0=pyhd8ed1ab_5
   - ply=3.11=py_1
+  - pooch=1.6.0=pyhd8ed1ab_0
   - prompt-toolkit=3.0.36=pyha770c72_0
   - psutil=5.9.4=py39ha30fb19_0
   - pthread-stubs=0.4=hc929b4f_1001
@@ -227,6 +235,8 @@ dependencies:
   - requests=2.28.1=pyhd8ed1ab_1
   - rope=1.7.0=pyhd8ed1ab_0
   - rtree=1.0.1=py39h7d0d40a_1
+  - scikit-learn=1.2.1=py39hdbdcc14_0
+  - scipy=1.10.0=py39h8a15683_2
   - setuptools=65.6.3=pyhd8ed1ab_0
   - sip=6.7.6=py39h7a8716b_0
   - six=1.16.0=pyh6c4a22f_0
@@ -248,6 +258,7 @@ dependencies:
   - tbb=2021.7.0=hb8565cd_1
   - text-unidecode=1.3=py_0
   - textdistance=4.5.0=pyhd8ed1ab_0
+  - threadpoolctl=3.1.0=pyh8a188c0_0
   - three-merge=0.1.1=pyh9f0ad1d_0
   - tinycss2=1.2.1=pyhd8ed1ab_0
   - tk=8.6.12=h5dbffcc_0
