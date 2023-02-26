@@ -13,8 +13,6 @@ import matplotlib.pyplot as pl
 import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd
-from time import time
-from sklearn.metrics import f1_score, accuracy_score
 
 
 def distribution(data, transformed = False):
@@ -28,7 +26,7 @@ def distribution(data, transformed = False):
     # Skewed feature plotting
     for i, feature in enumerate(['capital-gain','capital-loss']):
         ax = fig.add_subplot(1, 2, i+1)
-        ax.hist(data[feature], bins = 25, color = '#00A0A0')
+        ax.hist(data[feature], bins = 25)
         ax.set_title("'%s' Feature Distribution"%(feature), fontsize = 14)
         ax.set_xlabel("Value")
         ax.set_ylabel("Number of Records")
@@ -43,10 +41,6 @@ def distribution(data, transformed = False):
     else:
         fig.suptitle("Skewed Distributions of Continuous Census Data Features", \
             fontsize = 16, y = 1.03)
-
-    fig.tight_layout()
-    #fig.show()
-
 
 def evaluate(results, accuracy, f1):
     """
@@ -64,7 +58,7 @@ def evaluate(results, accuracy, f1):
 
     # Constants
     bar_width = 0.3
-    colors = ['#A00000','#00A0A0','#00A000']
+    colors = ['#A52A2A','#006400','#DAA520']
     
     # Super loop to plot four panels of data
     for k, learner in enumerate(results.keys()):
@@ -72,7 +66,7 @@ def evaluate(results, accuracy, f1):
             for i in np.arange(3):
                 
                 # Creative plot code
-                ax[j//3, j%3].bar(i+k*bar_width, results[learner][i][metric], width = bar_width, color = colors[k])
+                ax[j//3, j%3].bar(i+k*bar_width, results[learner][i][metric], width = bar_width, align='center', color = colors[k])
                 ax[j//3, j%3].set_xticks([0.45, 1.45, 2.45])
                 ax[j//3, j%3].set_xticklabels(["1%", "10%", "100%"])
                 ax[j//3, j%3].set_xlabel("Training Set Size")
@@ -118,11 +112,11 @@ def evaluate(results, accuracy, f1):
     # Tune the subplot layout
     # Refer - https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.subplots_adjust.html for more details on the arguments
     pl.subplots_adjust(left = 0.125, right = 1.2, bottom = 0.1, top = 0.9, wspace = 0.2, hspace = 0.3)    
-    pl.tight_layout()
+    #pl.tight_layout()
     pl.show()
     
 
-def feature_plot(importances, X_train, y_train):
+def feature_plot(importances, X_train):
     
     # Display the five most important features
     indices = np.argsort(importances)[::-1]
@@ -132,15 +126,11 @@ def feature_plot(importances, X_train, y_train):
     # Creat the plot
     fig = pl.figure(figsize = (9,5))
     pl.title("Normalized Weights for First Five Most Predictive Features", fontsize = 16)
-    pl.bar(np.arange(5), values, width = 0.6, align="center", color = '#00A000', \
-          label = "Feature Weight")
-    pl.bar(np.arange(5) - 0.3, np.cumsum(values), width = 0.2, align = "center", color = '#00A0A0', \
-          label = "Cumulative Feature Weight")
-    pl.xticks(np.arange(5), columns)
+    pl.bar(np.arange(5), values, width = 0.6, align="center", label = "Feature Weight")
+    pl.bar(np.arange(5) - 0.3, np.cumsum(values), width = 0.2, align = "center", label = "Cumulative Feature Weight")
+    pl.xticks(np.arange(5), columns, rotation=45)
     pl.xlim((-0.5, 4.5))
     pl.ylabel("Weight", fontsize = 12)
     pl.xlabel("Feature", fontsize = 12)
-    
-    pl.legend(loc = 'upper center')
-    pl.tight_layout()
+    pl.legend()
     pl.show()  
